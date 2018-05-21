@@ -1,0 +1,14 @@
+language: node_js
+dist: trusty
+sudo: required
+node_js: 6
+before_script: cd server/
+script:
+- npm install
+- npm test
+cache:
+  directories:
+  - node_modules
+env:
+  global:
+    - secure: "FMAfoM2aIvKxu3Cbl2KLJFJJvpOgp4ysraZKG9VA37W+TIW5US9QZtOVu20GimfqN00Vk5ItZAKr8FRoMs7SlrXc8D53cHbGwH6xpRCpShm3fXK0+k8XXNLSomLeSzKLeDoaTMAH3itljlRP1SPWC5tZhCNtaWddTNNNXFtFvgE0Y0CieahT+qdYQZeOFZk7NDZVRXCSbDglzGKknGhAFRAFxNxixd6PY3rvlKAa9aEpmu3ol8LdEfy9CdsPBeUFdlNQw3o/5Svh2qLJThQ5aIyKuJEUH9QVtTzCWVd+vLjQNG0uZJjRr2Ma4dW1VgJU5bfCKj1na9f9h3e1JM6j/TXYxmdTn+x1NR+ppg3oqvqpTnEpVbr8wNFyxBQ3j4fx8lxvLAAPPdO1O2uiTKiay+/eJqSlA+b9IH+YEXuW0cxeZt0aWFKxuKWi1/WGW3a4MQ4a+jtVmsMX1EX4ijZ807D5owHMaJaj7+3NmkapinU0J9WA3omXGMhNtQXjxpihVp/2DhI2r0O38eDViIXwSWiA/5no2aTA92frM8ci/FrvMED1jKgh8+nd6jWGrPJhjw6r/Ippc3v/p6tAOq8Rlkc3K6RMpDTqVHEz7H7oL6i0gkMhd5MfY9Pn6h7vezU6s0o0K7M3fPtqSur6XUU9ZGXwsqQ3E6t4rRLvU2hRWvw="

@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-'use strict';
 require('dotenv').config({ silent: true });
 
 var spawn = require('child_process').spawn;
 
+var app = require('./app');
 const express = require("express");
 const application = express();
 var port = 3001;
