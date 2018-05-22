@@ -5,7 +5,7 @@ Run unit and funtional tests with:
 
 ## Manual Tests
 
-Test your server and Visual Recognition classification by exectuting
+Test your server and Visual Recognition classification by executing
 the following in a shell:
 
 ### get your API key from the Visual Recognition service credentials
