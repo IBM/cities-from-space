@@ -40,7 +40,7 @@ This code pattern contains several pieces. The app server communicates with the 
 
 [![Deploy to IBM Cloud](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM/cities-from-space)
 
-Press the above ``Deploy to IBM Cloud`` button and then click on ``Deploy`` and then jump to step #5.
+Press the above ``Deploy to IBM Cloud`` button and then click on ``Deploy``.
 
 To monitor the deployment, in Toolchains click on `Delivery Pipeline`  and view the logs while the apps is being deployed.
 
@@ -48,6 +48,8 @@ To monitor the deployment, in Toolchains click on `Delivery Pipeline`  and view 
 
 To see the app and services created and configured for this code pattern, use the IBM Cloud dashboard. The app is named `cities-from-space` with a unique suffix. The following services are created and easily identified by the `cfs-` prefix:
     * cfs-visual-recognition
+
+Once deployed, jump to [step #5](#5-use-the-application-from-a-browser) to test.
 
 ## Deploy the server application locally
 
@@ -125,7 +127,7 @@ $ npm install
 $ npm start
 ```
 
-#### Use the application from a browser
+## 5. Use the application from a browser
 
 In order to classifier images of cities from space, you can point a browser to the server and test the application.
 
@@ -148,7 +150,7 @@ You can then upload a local picture, i.e one from this repository in `test/data/
 
 > You may see logs in the Deploy Stage that indicate that the app has crashed and cannot start:
 ```
-Starting app watson-vehicle-damage-analyzer-20171206202105670 in org scott.dangelo / space dev as scott.dangelo@ibm.com...
+Starting app cities-from-space-20171206202105670 in org scott.dangelo / space dev as scott.dangelo@ibm.com...
 
 0 of 1 instances running, 1 starting
 0 of 1 instances running, 1 starting
@@ -162,7 +164,7 @@ Starting app watson-vehicle-damage-analyzer-20171206202105670 in org scott.dange
 FAILED
 Error restarting application: Start unsuccessful
 
-TIP: use 'cf logs watson-vehicle-damage-analyzer-20171206202105670 --recent' for more information
+TIP: use 'cf logs cities-from-space-20171206202105670 --recent' for more information
 
 Finished: FAILED
 ```
