@@ -105,11 +105,11 @@ In IBM Cloud it will look like this:
 
 ![](doc/source/images/apiKey.png)
 
-Rename the ``cities-from-space/server/env.example`` file to ``cities-from-space/server/.env`` and add the API key:
+Rename the ``cities-from-space/server/env.example`` file to ``cities-from-space/server/.env`` and add the apikey:
 
 ```
 # Watson Visual Recognition
-VISUAL_RECOGNITION_API_KEY=<add_api_key>
+VISUAL_RECOGNITION_IAM_APIKEY=<add_apikey>
 ```
 
 ## 4. Install dependencies and run server
