@@ -5,6 +5,34 @@ Run unit and funtional tests with:
 
 ## Manual Tests
 
+Test your server and Visual Recognition classification by executing
+the following in a shell:
+
+### get your API key from the Visual Recognition service credentials
+```
+export API_KEY=<your_api_key>
+```
+
+### List your classifiers
+```
+curl -u "apikey:$API_KEY" "https://gateway.watsonplatform.net/visual-recognition/api/v3/classifiers?verbose=true&version=2018-03-19"
+```
+
+### set ENV variable for your classifier
+```
+export CLASSIFIER=<your_classifer>
+```
+
+### Classify image with your custom classifier
+#### export IMAGE_FILE for each image file in test/data/ dir
+```
+export IMAGE_FILE=Houston_test.jpg
+
+curl -X POST -u "apikey:$API_KEY" -F "images_file=@data/$IMAGE_FILE"  "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?classifier_ids=$CLASSIFIER&version=2018-03-19"
+```
+
+### Manual tests for old instances created before May 23, 2018
+
 Test your server and Visual Recognition classification by exectuting
 the following in a shell:
 
