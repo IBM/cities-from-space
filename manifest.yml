@@ -1,0 +1,16 @@
+---
+declared-services:
+  cfs-visual-recognition:
+    label: watson_vision_combined
+    plan: lite
+applications:
+- path: ./server
+  memory: 512M
+  instances: 1
+  name: cities-from-space
+  disk_quota: 512M
+  random-route: false
+  services:
+  - cfs-visual-recognition
+env:
+  OPTIMIZE_MEMORY: true
