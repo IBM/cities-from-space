@@ -108,7 +108,8 @@ WatsonVisRecSetup.prototype.createVisRecClassifier = function(params) {
         Houston_positive_examples: fs.createReadStream('./data/Houston_positive_examples.zip'),
         Chicago_positive_examples: fs.createReadStream('./data/Chicago_positive_examples.zip'),
         Perth_positive_examples: fs.createReadStream('./data/Perth_positive_examples.zip'),
-        Tokyo_positive_examples: fs.createReadStream('./data/Tokyo_positive_examples.zip')
+        Tokyo_positive_examples: fs.createReadStream('./data/Tokyo_positive_examples.zip'),
+        Paris_positive_examples: fs.createReadStream('./data/Paris_positive_examples.zip')
       };
     this.vizRecClient.createClassifier(createClassifierParams, (err, response) => {
       if (err) {
