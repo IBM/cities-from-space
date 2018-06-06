@@ -1,130 +1,287 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+*/
 
 h1 {
-    font-size:24px;
-    font-weight:normal;
-    margin:10px;
-    overflow:visible;
-    padding:0px;
-    text-align:left;
-    background-color: black;
-    color: white;
-}
-
-h3 {
-    font-size:30px;
-    font-weight:bold;
-    margin-top: 0px;
-    margin-bottom: 15px;
-    overflow:visible;
-    padding:0px;
-    text-align:left;
+  font-size:24px;
+  font-weight:normal;
+  margin:10px;
+  padding:0px;
+  background-color: black;
+  color: white;
 }
 
 html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0%;
-    font-family: sans-serif;
-    font-size:20px;
-    text-align: left;
+  height: 100%;
+  margin: 0;
+  padding: 0%;
+  font-family: monospace;
+  font-size:20px;
+  text-align: left;
+  background-color: #222;
 }
-main {
-    margin-top: 60px;
-    margin-left: 20px;
-    margin-right: 20px;
-    height: 75%;
-    font-family: sans-serif;
-    text-align: left;
-}
+
+/*
+Header Styling
+*/
+
 header {
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 50px;
-    background-color: black;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #00b8ff;
 }
-header img, header h1 {
-    float: left;
-    display: block;
+
+header div.header-title {
+  width: 100%;
+  flex-grow: 1;
 }
-header img#logo {
-    width: 28px;
-    height: 28px;
-    margin: 8px;
+
+header div.header-logos {
+  padding-right: 12px;
+  flex-grow: 0;
+  display: grid;
+  grid-template-columns: auto auto;
 }
+
+header div.header-logos img.logo {
+  height: 100%;
+  max-width:100px;
+  padding: 9px;
+  box-sizing: border-box;
+}
+
+header div.header-logos img.logo.ibm-logo {
+  padding: 12px;
+}
+
 header h1 {
-    color: white;
-    text-align: left;
-    font-weight: bold;
+  color: white;
+  text-align: left;
+  font-weight: bold;
 }
 
-body .filebutton {
-    border-width: 2px;
-    border-style: outset;
-    border-color: buttonface;
-    border-image: initial;
-    margin-right: 10px;
-    padding: 10px;
-    background-color: whitesmoke;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
+/*
+Body Styling
+*/
+
+.button--file {
+  border-width: 2px;
+  border-style: outset;
+  border-color: buttonface;
+  border-image: initial;
+  padding: 10px;
+  background-color: whitesmoke;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: monospace;
 }
 
-article {
-    margin-top: 0;
+.button--action {
+  background: #268cb4;
+  border: 1px solid #02b8ff;
+  color: white;
+  margin-left: 12px;
 }
 
-img {
-    padding: 0;
-    display: block;
-    max-height: 100%;
-    max-width: 100%;
+.button--action:hover {
+  cursor: pointer;
+  background: #97b83a;
+  border: 1px solid #02b8ff;
+  color: white;
 }
-canvas {
-    padding: 0;
-    display: block;
-    max-height: 100%;
-    max-width: 100%;
-    float: left;
+
+body .filebutton:hover {
+  background-color: blue;
+  cursor: pointer;
+}
+
+main {
+  padding-top: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+  height: calc(100% - 72px);
+  text-align: left;
+  display: flex;
+  overflow-y: hidden;
+}
+
+/*
+Image Upload & Results
+*/
+
+main #watson-results {
+  min-width: 70%;
+  flex-grow: 1;
+  border-right: 1px solid #393939;
+  margin-right: 12px;
+  padding-right: 12px;
+  margin-bottom: 12px;
+}
+
+main #watson-results form {
+  margin-top: 12px;
+}
+
+main #watson-results #image-preview {
+  margin: auto;
+  max-height: 60%;
+  margin-bottom: 12px;
+  border: 1px solid grey;
+}
+
+main #watson-results form .file-select {
+  display: flex;
+}
+
+main #watson-results form .file-select input[type="file"]{
+  flex-grow: 1;
+}
+main #watson-results h3 {
+  color: white;
+  margin: 0px;
+  font-weight: normal;
+  margin: 12px 0px;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    float: left;
-    /* width: 100%; */
-    border: 1px solid #ddd;
-    margin-right: 20px;
-    margin-bottom: 20px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: #bbbbbb;
+  width: 100%;
+  border: 1px solid #ddd;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+tr {
+  background-color: #4c4c4c;
 }
 
 th, td {
-    text-align: left;
-    padding: 8px;
+  text-align: left;
+  font-weight: normal;
+  padding: 8px;
 }
 
-tr:nth-child(even){background-color: #f2f2f2}
+tr:first-child {background-color: #222; color: white;border-bottom: 1px solid #709a04;}
+tr:nth-child(even) {background-color: #5a5a5a;}
 tr th:nth-child(n+2){text-align: right}
 tr td:nth-child(n+2){text-align: right}
+
+tr.maximum {
+  color: #b9f415;
+}
+
+.loading-message {
+  font-weight: normal;
+  color: white;
+  text-align: center;
+  display: none;
+  animation: pulse 0.7s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*
+Test Images (Right Panel)
+*/
+
+main #test-samples {
+  max-width: 30%;
+  width: 400px;
+  max-width: 30%;
+}
+
+main #test-samples h2 {
+  font-size: 14pt;
+  color: white;
+  border-bottom: 1px solid white;
+  padding-bottom: 6px;
+  font-weight: normal;
+}
+
+main #test-samples .sample-image-container {
+  height:20%;
+  margin-bottom: 2%;
+  position: relative;
+  background-size: cover;
+  border: 1px solid grey;
+}
+
+main #test-samples .sample-image-container#chicago {
+  background-image: url(../img/test/Chicago_test.jpg);
+}
+
+main #test-samples .sample-image-container#tokyo {
+  background-image: url(../img/test/Tokyo_test.jpg);
+}
+
+main #test-samples .sample-image-container#houston {
+  background-image: url(../img/test/Houston_test.jpg);
+}
+
+main #test-samples .sample-image-container#perth {
+  background-image: url(../img/test/Perth_test.jpg);
+}
+
+
+main #test-samples .sample-image-container:hover {
+  cursor: pointer;
+  border-color: #41cc41;
+}
+
+main #test-samples .sample-image-container h3 {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  color: white;
+  margin: 0px;
+  font-size: 12pt;
+  font-weight: normal;
+  padding: 6px;
+  background-color: #8080804a;
+  box-sizing: border-box;
+}
+
+article {
+  margin-top: 0;
+}
+
+canvas {
+  padding: 0;
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  float: left;
+}

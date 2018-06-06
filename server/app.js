@@ -73,6 +73,21 @@ function handleSetupError(reason) {
 }
 
 application.use(express.static(__dirname + "/public"));
+application.get("/sample/:city", function (req, result) {
+    const params = {
+        image_file: fs.createReadStream('./public/img/test/' + req.params.city + '_test.jpg'),
+        classifier_ids: [custom_classifier] || "",
+        threshold: 0
+    };
+    visual_recognition.classify(params, function (err, res) {
+        if (err) {
+            console.log(err);
+        } else {
+            const labelsvr = JSON.parse(JSON.stringify(res)).images[0].classifiers[0];
+            result.send({data: labelsvr});
+        }
+    });
+});
 application.post("/uploadpic", function (req, result) {
     const form = new formidable.IncomingForm();
     form.keepExtensions = true;
