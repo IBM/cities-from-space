@@ -29,21 +29,47 @@
     </head>
     <body>
         <header>
-            <img id="logo" src="img/ISS_logo.svg.png" alt="ISS_logo">
-            <h1>Cities From Space</h1>
+            <div class="header-title">
+              <h1>Cities From Space</h1>
+            </div>
+            <div class="header-logos">
+              <img class="logo casis-logo" src="img/casis-logo-white.png" alt="CASIS_logo">
+              <img class="logo ibm-logo" src="img/ibm-logo-white.png" alt="IBM_logo">
+            </div>
         </header>
     </body>
 
     <script type="text/javascript" src="js/index.js"></script>
 
     <main>
+      <div id="watson-results">
+        <img id="image-preview" src="#" style="display: none;" />
         <form enctype="multipart/form-data" action="../uploadpic" target="mytarget" method="POST">
-            <img id="imagePreview" src="#" style="display: none;"  />
-            <input name="myPhoto" type="file" id="foo" class="filebutton" />
-            <input type="submit" value="Upload File" class="filebutton" />
+            <div class="file-select">
+              <input name="myPhoto" type="file" id="foo" class="button--file" />
+              <input type="submit" value="Send to Watson" class="button--file button--action" onclick="ToggleLoadingMessage('block')" />
+            </div>
         </form>
-        <iframe id="mytarget" name="mytarget" style="width:0; height:0; border:0; border:none" src=""></iframe>
+        <h4 class="loading-message">Awaiting a response from Watson Visual Recognition...</h4>
         <article />
+      </div>
+      <div id="test-samples">
+        <h2>Image Samples</h2>
+        <div class="sample-image-container" id="chicago" onclick="loadSampleImage('Chicago')">
+          <h3>Chicago</h3>
+        </div>
+        <div class="sample-image-container" id="houston" onclick="loadSampleImage('Houston')">
+          <h3>Houston</h3>
+        </div>
+        <div class="sample-image-container" id="perth" onclick="loadSampleImage('Perth')">
+          <h3>Perth</h3>
+        </div>
+        <div class="sample-image-container" id="tokyo" onclick="loadSampleImage('Tokyo')">
+          <h3>Tokyo</h3>
+        </div>
+      </div>
+
+        <iframe id="mytarget" name="mytarget" style="width:0; height:0; border:0; border:none" src=""></iframe>
     </main>
 
 </html>
