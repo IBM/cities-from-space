@@ -42,7 +42,8 @@ WatsonVisRecSetup.prototype.downloadImages = function() {
          'https://ibm.box.com/shared/static/ekdm5g8oqg8rpwx283yce32rg607xk1k.zip',
          'https://ibm.box.com/shared/static/yc652frh0t7tdp1741dpea5tvkynb7yw.zip',
          'https://ibm.box.com/shared/static/nog506nneb5f9wiex74rnb2s1tr91ea6.zip',
-         'https://ibm.box.com/shared/static/d4sv71jkomye84sfi1nnh6xa8i5lfpgb.zip'
+         'https://ibm.box.com/shared/static/d4sv71jkomye84sfi1nnh6xa8i5lfpgb.zip',
+         'https://ibm.box.com/shared/static/jfplmuyrfm8s8rn7ikndufkuo6tq1f1t.zip'
         ].map(x => download(x, './data'))).then(() => {
 	console.log('files downloaded!');
         });
@@ -109,7 +110,8 @@ WatsonVisRecSetup.prototype.createVisRecClassifier = function(params) {
         Chicago_positive_examples: fs.createReadStream('./data/Chicago_positive_examples.zip'),
         Perth_positive_examples: fs.createReadStream('./data/Perth_positive_examples.zip'),
         Tokyo_positive_examples: fs.createReadStream('./data/Tokyo_positive_examples.zip'),
-        Paris_positive_examples: fs.createReadStream('./data/Paris_positive_examples.zip')
+        Paris_positive_examples: fs.createReadStream('./data/Paris_positive_examples.zip'),
+        negative_examples: fs.createReadStream('./data/negative_examples.zip')
       };
     this.vizRecClient.createClassifier(createClassifierParams, (err, response) => {
       if (err) {
