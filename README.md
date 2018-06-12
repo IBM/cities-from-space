@@ -73,9 +73,11 @@ $ cd cities-from-space
 
 ## 2. Create the Watson Visual Recognition service
 
-Create a Watson Visual Recognition service using IBM Cloud or Watson Studio, a free `Lite` plan and a `Standard` plan is available for both. Ensure the service is named `wvda-visual-recognition`.
+Create a Watson Visual Recognition service using IBM Cloud or Watson Studio, a free `lite` plan and a `Standard` plan is available for both. Ensure the service is named `wvda-visual-recognition`.
 
-* [**Watson Visual Recognition on Watson Studio**](https://dataplatform.ibm.com/data/discovery/watson_vision_combined/details?target=watson&context=analytics)
+* [**Watson Visual Recognition on Watson Studio**](https://dataplatform.ibm.com)
+
+Under `Watson services` click `+ Add service` and choose `Visual Recognition`
 
 OR
 
@@ -99,11 +101,11 @@ To use the Visual Recognition service you will need the API key.
 
 To retrieve the key in Watson Studio go to the following tab:
 
-![](https://github.com/IBM/pattern-images/blob/master/visual-recognition/VizRecCreds.png)
+![](https://github.com/IBM/pattern-images/blob/master/visual-recognition/WatsonStuidioVizRecIAMcred.png)
 
 In IBM Cloud it will look like this:
 
-![](doc/source/images/apiKey.png)
+![](https://github.com/IBM/pattern-images/blob/master/visual-recognition/IBMcloudVizRecIAMcred.png)
 
 Rename the ``cities-from-space/server/env.example`` file to ``cities-from-space/server/.env`` and add the apikey:
 
@@ -120,7 +122,7 @@ If you used ``Deploy to IBM Cloud``, the setup is automatic.
 
 #### If you decided to run the app locally...
 
-* Install [Node.js and npm](https://nodejs.org/en/download/) (`npm` version 4.5.0 or higher)
+* Install [Node.js and npm](https://nodejs.org/en/download/) (`node` version 6.9.0 or higher)
 
 * Install the app dependencies and start the app:
 
@@ -129,16 +131,18 @@ $ npm install
 $ npm start
 ```
 
+> Note that the first time that you run the app, it will download >100M of training data to the `server/data` directory, then it will create the custom classifier using that data, which will take several minutes to complete.
+
 ## 5. Use the application from a browser
 
 In order to classifier images of cities from space, you can point a browser to the server and test the application.
 
 * For a server running locally, open a browser tab to `localhost:<port>`.
-* For a server running on IBM Cloud, open a browser tab and point it to the URL for your server `<IBM_Cloud_server_URL:port>`
-
 The default port is `3000`
+* For a server running on IBM Cloud, open a browser tab and point it to the URL for your server `<IBM_Cloud_server_URL>`
 
-You can then upload a local picture, i.e one from this repository in `test/data/`
+You can then upload a local picture, i.e one from this repository in `test/data/`, or choose
+one of the `Image Samples` from the browser window.
 
 # Troubleshooting
 
@@ -151,6 +155,7 @@ You can then upload a local picture, i.e one from this repository in `test/data/
 * Deploy or Dashboard shows app is not running
 
 > You may see logs in the Deploy Stage that indicate that the app has crashed and cannot start:
+
 ```
 Starting app cities-from-space-20171206202105670 in org scott.dangelo / space dev as scott.dangelo@ibm.com...
 
@@ -178,6 +183,7 @@ Finished: FAILED
 > Both of these can be spurious errors. Click the `Visit App URL` link in the IBM Cloud console, or try `Runtime` -> `SSH`, or simply test the app to see if it is running.
 
 # Links
+
 * [Watson Node.js SDK](https://github.com/watson-developer-cloud/node-sdk)
 
 # Learn more
