@@ -30,7 +30,7 @@ casper.test.begin('Cities From Space', 2, function suite(test) {
   casper.open(baseHost, {
     data: {
       method: 'POST',
-      data: '../../server/data/testFlatTire.jpg'
+      data: '../data/Tokyo_test.jpg'
     }
   });
 
