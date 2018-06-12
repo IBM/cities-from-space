@@ -1,6 +1,3 @@
-**Work In Progress**
-# This Pattern in incomplete. Please Check back soon for the finished version
-
 [![Build Status](https://travis-ci.org/IBM/cities-from-space.svg?branch=master)](https://travis-ci.org/IBM/cities-from-space)
 
 # Cities From Space
