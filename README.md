@@ -30,6 +30,8 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 # Watch the Video
 
+[![](https://i.ytimg.com/vi/TYF1velPMYQ/0.jpg)](https://youtu.be/TYF1velPMYQ)
+
 # Steps
 
 This code pattern contains several pieces. The app server communicates with the Watson Visual Recognition service. The web application is built locally and run in a browser, or accessible on the web server at the same URL. You can deploy the server application using the IBM Cloud, or locally on your machine.
@@ -181,6 +183,7 @@ Finished: FAILED
 
 # Links
 
+* [YouTube Video](https://youtu.be/TYF1velPMYQ)
 * [Watson Node.js SDK](https://github.com/watson-developer-cloud/node-sdk)
 
 # Learn more
