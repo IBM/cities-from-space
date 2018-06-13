@@ -141,6 +141,12 @@ The default port is `3000`
 You can then upload a local picture, i.e one from this repository in `test/data/`, or choose
 one of the `Image Samples` from the browser window.
 
+# Sample Output
+
+Here's a sample using an image of Tokyo at night:
+
+![](doc/source/images/SampleCitiesFromSpace.png)
+
 # Troubleshooting
 
 * Test the Visual Recognition service using the instructions in [test/README.md](test/README.md)
