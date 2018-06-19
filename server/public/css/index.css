@@ -134,6 +134,7 @@ Image Upload & Results
 
 main #watson-results {
   min-width: 70%;
+  overflow-y: auto;
   flex-grow: 1;
   border-right: 1px solid #393939;
   margin-right: 12px;
@@ -147,7 +148,8 @@ main #watson-results form {
 
 main #watson-results #image-preview {
   margin: auto;
-  max-height: 60%;
+  max-height: 50%;
+  max-width: 100%;
   margin-bottom: 12px;
   border: 1px solid grey;
 }
@@ -220,7 +222,7 @@ Test Images (Right Panel)
 main #test-samples {
   max-width: 30%;
   width: 400px;
-  max-width: 30%;
+  min-width: 200px;
 }
 
 main #test-samples h2 {
