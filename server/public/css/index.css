@@ -148,7 +148,7 @@ main #watson-results form {
 
 main #watson-results #image-preview {
   margin: auto;
-  max-height: 50%;
+  max-height: 40%;
   max-width: 100%;
   margin-bottom: 12px;
   border: 1px solid grey;
@@ -166,6 +166,7 @@ main #watson-results h3 {
   margin: 0px;
   font-weight: normal;
   margin: 12px 0px;
+  font-size: 3vh;
 }
 
 table {
@@ -176,6 +177,7 @@ table {
   border: 1px solid #525252;
   margin-right: 20px;
   margin-bottom: 20px;
+  font-size: 2.5vh;
 }
 
 tr {
