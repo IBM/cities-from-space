@@ -2,7 +2,7 @@
 
 # Identify cities from space
 
-The International Space Station (ISS), launched in 1998, [serves as a microgravity and space environment research laboratory in which crew members conduct experiments in biology, human biology, physics, astronomy, meteorology, and other fields.](https://en.wikipedia.org/wiki/International_Space_Station). These experiments have produced copious amounts of data ane experimental results, many of which are available to the public. [Windows on Earth](https://www.windowsonearth.org/) showcases images taken from the ISS, and are some of the most popular. We will use images of cities at night in this Code Pattern to build a Visual Recognition custom classifier using IBM Watson [Visual Recognition](https://www.ibm.com/watson/developercloud/visual-recognition.html). There are thousands of images created by the ISS, and using AI we can help to categorize and organize these images.
+The International Space Station (ISS), launched in 1998, [serves as a microgravity and space environment research laboratory in which crew members conduct experiments in biology, human biology, physics, astronomy, meteorology, and other fields.](https://en.wikipedia.org/wiki/International_Space_Station). These experiments have produced copious amounts of data and experimental results, many of which are available to the public. [Windows on Earth](https://www.windowsonearth.org/) showcases images taken from the ISS, and are some of the most popular. We will use images of cities at night in this Code Pattern to build a Visual Recognition custom classifier using IBM Watson [Visual Recognition](https://www.ibm.com/watson/developercloud/visual-recognition.html). There are thousands of images created by the ISS, and using AI we can help to categorize and organize these images.
 
 When the reader has completed this Code Pattern, they will understand how to:
 
@@ -35,7 +35,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 # Steps
 
 This code pattern contains several pieces. The app server communicates with the Watson Visual Recognition service. The web application is built locally and run in a browser, or accessible on the web server at the same URL. You can deploy the server application using the IBM Cloud, or locally on your machine.
-Note that when you first run the server app approximately 125M of image files will be downloaded to the server/data/ directory. These will be used to train the custom classifier.
+Note that when you first run the server app approximately 125M of image files will be downloaded to the `server/data/` directory. These will be used to train the custom classifier.
 
 ## Deploy the server application to IBM Cloud
 
