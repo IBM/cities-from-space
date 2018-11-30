@@ -34,6 +34,8 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 # Steps
 
+> NOTE: The Watson Visual Recognition service required for this patten only exists in the US-South/Dallas region (as of 11/30/18). You will only be able to deploy and/or use this code there.
+
 This code pattern contains several pieces. The app server communicates with the Watson Visual Recognition service. The web application is built locally and run in a browser, or accessible on the web server at the same URL. You can deploy the server application using the IBM Cloud, or locally on your machine.
 Note that when you first run the server app approximately 125M of image files will be downloaded to the server/data/ directory. These will be used to train the custom classifier.
 
