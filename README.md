@@ -2,7 +2,7 @@
 
 # Identify cities from space
 
-The International Space Station (ISS), launched in 1998, [serves as a microgravity and space environment research laboratory in which crew members conduct experiments in biology, human biology, physics, astronomy, meteorology, and other fields.](https://en.wikipedia.org/wiki/International_Space_Station). These experiments have produced copious amounts of data ane experimental results, many of which are available to the public. [Windows on Earth](https://www.windowsonearth.org/) showcases images taken from the ISS, and are some of the most popular. We will use images of cities at night in this Code Pattern to build a Visual Recognition custom classifier using IBM Watson [Visual Recognition](https://www.ibm.com/watson/developercloud/visual-recognition.html). There are thousands of images created by the ISS, and using AI we can help to categorize and organize these images.
+The International Space Station (ISS), launched in 1998, [serves as a microgravity and space environment research laboratory in which crew members conduct experiments in biology, human biology, physics, astronomy, meteorology, and other fields.](https://en.wikipedia.org/wiki/International_Space_Station). These experiments have produced copious amounts of data ane experimental results, many of which are available to the public. [Windows on Earth](https://www.windowsonearth.org/) showcases images taken from the ISS, and are some of the most popular. We will use images of cities at night in this Code Pattern to build a Visual Recognition custom classifier using IBM Watson [Visual Recognition](https://www.ibm.com/watson/services/visual-recognition/). There are thousands of images created by the ISS, and using AI we can help to categorize and organize these images.
 
 When the reader has completed this Code Pattern, they will understand how to:
 
@@ -22,7 +22,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 ## Included components
 
-* [Watson Visual Recognition](https://www.ibm.com/watson/developercloud/visual-recognition.html): Visual Recognition understands the contents of images - tag images, find human faces, approximate age and gender, and find similar images in a collection.
+* [Watson Visual Recognition](https://www.ibm.com/watson/services/visual-recognition/): Visual Recognition understands the contents of images - tag images, find human faces, approximate age and gender, and find similar images in a collection.
 
 ## Featured Technologies
 
@@ -34,7 +34,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 # Steps
 
-> NOTE: The Watson Visual Recognition service required for this patten only exists in the US-South/Dallas region (as of 11/30/18). You will only be able to deploy and/or use this code there.
+> NOTE: The Watson Visual Recognition service required for this patten only exists in the Dallas region (as of 12/14/18). You will only be able to deploy and/or use this code there.
 
 This code pattern contains several pieces. The app server communicates with the Watson Visual Recognition service. The web application is built locally and run in a browser, or accessible on the web server at the same URL. You can deploy the server application using the IBM Cloud, or locally on your machine.
 Note that when you first run the server app approximately 125M of image files will be downloaded to the server/data/ directory. These will be used to train the custom classifier.
@@ -76,31 +76,22 @@ $ cd cities-from-space
 
 Create a Watson Visual Recognition service using IBM Cloud or Watson Studio, a free `lite` plan and a `Standard` plan is available for both. Ensure the service is named `wvda-visual-recognition`.
 
-* [**Watson Visual Recognition on Watson Studio**](https://dataplatform.ibm.com)
+* [**Watson Visual Recognition on Watson Studio**](https://dataplatform.cloud.ibm.com)
 
-Under `Watson services` click `+ Add service` and choose `Visual Recognition`
+Under the top bar `Services` -> `Watson services` click `+ Add service` and choose `Visual Recognition`
 
 OR
 
 * [**Watson Visual Recognition on IBM Cloud**](https://console.bluemix.net/catalog/services/visual-recognition)
 
-### Why the two choices?
-
-Traditionally [IBM Cloud](https://console.bluemix.net) was the main platform for application developers, while [IBM Watson Studio](https://dataplatform.ibm.com/) (formally Data Science Experience) was targetted towards Data Scientists. In early 2018, a new offering, [Watson Studio was introduced](https://medium.com/ibm-watson/introducing-ibm-watson-studio-e93638f0bb47). Watson Studio provides a suite of tools for data scientists and application developers, allowing them to collaboratively connect to data, wrangle that data and use it to build, train and deploy models at scale.
-
-To help you decide which platform to use, try answering the following questions:
-
-* Am I using multiple data sets? Use Watson Studio
-* Am I creating a custom classifier for Watson Visual Recognition? Use Watson Studio
-* Am I using a built-in classifier of Watson Visual Recognition? Use IBM Cloud
-
-Sufficiently confused? Don't worry. Any resource that you create in IBM Cloud or Watson Studio will be available in the other.
-
 ## 3. Add Visual Recoginition API key to .env file
 
-To use the Visual Recognition service you will need the API key.
+To use the Visual Recognition service you will need the IAM apikey.
 
-To retrieve the key in Watson Studio go to the following tab:
+To retrieve the key in Watson Studio, scroll down to the list of `Visual Recognition` services,
+find the service you've created and click on the name.
+
+Go to the `Credentials` tab and click `Show credential` for existing creds of `New credential +` if necessary.
 
 ![](https://github.com/IBM/pattern-images/blob/master/visual-recognition/WatsonStuidioVizRecIAMcred.png)
 
@@ -195,7 +186,7 @@ Finished: FAILED
 
 # Learn more
 
-* **Artificial Intelligence Code Patterns**: Enjoyed this Code Pattern? Check out our other [AI Code Patterns](https://developer.ibm.com/code/technologies/artificial-intelligence/).
+* **Artificial Intelligence Code Patterns**: Enjoyed this Code Pattern? Check out our other [AI Code Patterns](https://developer.ibm.com/technologies/artificial-intelligence/)
 * **AI and Data Code Pattern Playlist**: Bookmark our [playlist](https://www.youtube.com/playlist?list=PLzUbsvIyrNfknNewObx5N7uGZ5FKH0Fde) with all of our Code Pattern videos
 * **With Watson**: Want to take your Watson app to the next level? Looking to utilize Watson Brand assets? [Join the With Watson program](https://www.ibm.com/watson/with-watson/) to leverage exclusive brand, marketing, and tech resources to amplify and accelerate your Watson embedded commercial solution.
 
