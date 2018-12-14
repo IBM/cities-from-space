@@ -101,7 +101,7 @@ In IBM Cloud it will look like this:
 
 Rename the ``cities-from-space/server/env.example`` file to ``cities-from-space/server/.env`` and add the apikey:
 
-```
+```bash
 # Watson Visual Recognition
 VISUAL_RECOGNITION_IAM_APIKEY=<add_apikey>
 ```
@@ -118,9 +118,10 @@ If you used ``Deploy to IBM Cloud``, the setup is automatic.
 
 * Install the app dependencies and start the app:
 
-```
-$ npm install
-$ npm start
+```bash
+cd server
+npm install
+npm start
 ```
 
 > Note that the first time that you run the app, it will download >100M of training data to the `server/data` directory, then it will create the custom classifier using that data, which will take several minutes to complete.
