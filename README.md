@@ -41,7 +41,7 @@ Note that when you first run the server app approximately 125M of image files wi
 
 ## Deploy the server application to IBM Cloud
 
-[![Deploy to IBM Cloud](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM/cities-from-space)
+[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/IBM/cities-from-space)
 
 Press the above ``Deploy to IBM Cloud`` button and then click on ``Deploy``.
 
@@ -82,7 +82,7 @@ Under the top bar `Services` -> `Watson services` click `+ Add service` and choo
 
 OR
 
-* [**Watson Visual Recognition on IBM Cloud**](https://console.bluemix.net/catalog/services/visual-recognition)
+* [**Watson Visual Recognition on IBM Cloud**](https://cloud.ibm.com/catalog/services/visual-recognition)
 
 ## 3. Add Visual Recoginition API key to .env file
 
