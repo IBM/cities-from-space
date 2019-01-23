@@ -1,4 +1,4 @@
-[![Build Status](https://api.travis-ci.org/IBM/cities-from-space.svg?branch=master)](https://travis-ci.org/IBM/cities-from-space)
+[![Build Status](https://travis-ci.org/IBM/cities-from-space.svg?branch=master)](https://travis-ci.org/IBM/cities-from-space)
 
 # Identify cities from space
 
@@ -68,7 +68,7 @@ Perform steps 1-4:
 Clone the `cities-from-space` repo locally. In a terminal, run:
 
 ```
-$ git clone https://github.com/IBM/cities-from-space.git
+$ git clone https://github.com/IBM/cities-from-space
 $ cd cities-from-space
 ```
 
@@ -93,11 +93,11 @@ find the service you've created and click on the name.
 
 Go to the `Credentials` tab and click `Show credential` for existing creds of `New credential +` if necessary.
 
-![](https://github.com/IBM/pattern-images/blob/master/visual-recognition/WatsonStuidioVizRecIAMcred.png)
+![](https://github.com/IBM/pattern-utils/blob/master/visual-recognition/WatsonStuidioVizRecIAMcred.png)
 
 In IBM Cloud it will look like this:
 
-![](https://github.com/IBM/pattern-images/blob/master/visual-recognition/IBMcloudVizRecIAMcred.png)
+![](https://github.com/IBM/pattern-utils/blob/master/visual-recognition/IBMcloudVizRecIAMcred.png)
 
 Rename the ``cities-from-space/server/env.example`` file to ``cities-from-space/server/.env`` and add the apikey:
 
