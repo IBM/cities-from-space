@@ -1,6 +1,13 @@
+# WARNING: This repository is no longer maintained :warning:
+
+> This repository will not be updated. The repository will be kept available in read-only mode.
+
 [![Build Status](https://travis-ci.org/IBM/cities-from-space.svg?branch=master)](https://travis-ci.org/IBM/cities-from-space)
 
 # Identify cities from space
+
+> **Note: This pattern has now been deprecated because it uses Watson Visual Recognition which is discontinued. Existing instances are supported until 1 December 2021, but as of 7 January 2021, you can't create instances. Any instance that is provisioned on 1 December 2021 will be deleted. Please view the [Maximo Visual Inspection trial](https://www.ibm.com/support/pages/ibm-maximo-visual-inspection) as a way 
+to get started with image classification.
 
 The International Space Station (ISS), launched in 1998, [serves as a microgravity and space environment research laboratory in which crew members conduct experiments in biology, human biology, physics, astronomy, meteorology, and other fields.](https://en.wikipedia.org/wiki/International_Space_Station). These experiments have produced copious amounts of data ane experimental results, many of which are available to the public. [Windows on Earth](https://www.windowsonearth.org/) showcases images taken from the ISS, and are some of the most popular. We will use images of cities at night in this Code Pattern to build a Visual Recognition custom classifier using IBM Watson [Visual Recognition](https://www.ibm.com/watson/services/visual-recognition/). There are thousands of images created by the ISS, and using AI we can help to categorize and organize these images.
 
